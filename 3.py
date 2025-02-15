@@ -77,6 +77,7 @@ def train():
     config, args,_ = parser.parse_args_into_dataclasses()
     log_config = {**asdict(config), **asdict(args)}
     logging.info(f"Training config: {log_config}")
+    print('模型训练参数是',log_config)
 
     # loading model
     kwargs = {}
