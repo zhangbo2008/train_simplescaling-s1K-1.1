@@ -23,13 +23,14 @@ class TrainingConfig:
     dagger: bool = field(default=False)
 
     def __post_init__(self):
-        os.environ['WANDB_PROJECT'] = self.wandb_project
-        os.environ['WANDB_ENTITY'] = self.wandb_entity
+        # os.environ['WANDB_PROJECT'] = self.wandb_project
+        # os.environ['WANDB_ENTITY'] = self.wandb_entity
+        pass
 
 def train():
     #
     uid=0
-    base_model="/mnt/d/qwen0.5" #=======2025-02-14,17点42 这个根据自己需要, 我是离线的所以我设置自己路径.    Qwen/Qwen2.5-0.5B-Instruct
+    base_model="Qwen/Qwen2.5-0.5B-Instruct" #=======2025-02-14,17点42 这个根据自己需要, 我是离线的所以我设置自己路径.    Qwen/Qwen2.5-0.5B-Instruct
     lr=1e-5
     min_lr=0
     epochs=5
@@ -47,6 +48,7 @@ def train():
     f'--train_file_path=simplescaling/s1K_tokenized',
     f'--model_name={base_model}',
     f'--warmup_ratio=0.05',
+    f'--gradient_checkpointing=True',
     # f'--fsdp=full_shard auto_wrap',
     # f'--fsdp_config=train/fsdp_config_qwen.json',
     f'--bf16=True',
