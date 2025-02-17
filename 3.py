@@ -40,7 +40,7 @@ def train():
     max_steps=-1
 
     tianjia=[
-    f'--block_size=8000', # ========这个改小点. 太废显存. 默认32768
+    f'--block_size=1000', # ========这个改小点. 太废显存. 默认32768
     f'--per_device_train_batch_size={micro_batch_size}',
     f'--per_device_eval_batch_size={micro_batch_size}',
     f'--gradient_accumulation_steps={gradient_accumulation_steps}',

@@ -1,3 +1,18 @@
+1.另一个新项目:
+https://docs.unsloth.ai/
+
+When deciding between using Retrieval-Augmented Generation (RAG) or fine-tuning, it's important to note that fine-tuning can replicate RAG's functionalities and not vice versa. Instead of using one or the other, we recommend people to use both which greatly increases accuracy, useability and reduces hallucinations.
+
+看来最好的方法是 微调加rag
+
+
+
+
+
+
+
+
+
 已经把参数改成cpu也能自动适配的了. 运行2.py即可.都不需要手动改.
 
 
