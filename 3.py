@@ -61,7 +61,6 @@ def train():
     f'--adam_beta1=0.9',
     f'--adam_beta2=0.95',
     f'--output_dir=ckpts/s1-{uid}',
-
     f'--save_only_model=True',]
     for i  in tianjia:
             sys.argv.append(i)
